@@ -57,6 +57,12 @@ const myWeek = [
     }
 ];
 
+function timeSpent(log, act){
+    return log.filter(entry => entry.activity === act)
+    .map(entry => entry.hoursSpent)
+    .reduce((entry, total) => entry+total, 0);
+}
+
 /* 
 Predictions: 
 Which activity will have the highest enjoyment?
