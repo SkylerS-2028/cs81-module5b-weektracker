@@ -56,3 +56,15 @@ const myWeek = [
         timeOfDay:"morning"
     }
 ];
+
+/* 
+Predictions: 
+Which activity will have the highest enjoyment?
+The concert will have the highest enjoyment.
+
+Which category will dominate your week?
+The academic category will dominate my week.
+
+What patterns might exist around time of day?
+I typically study and do most activities in the afternoon.
+*/
