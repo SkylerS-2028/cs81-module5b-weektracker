@@ -1,3 +1,4 @@
+
 const myWeek = [
     {
         day:"Monday",
@@ -81,6 +82,11 @@ function mostCommonCategory(log){
     return mostCommon;
 }
 
+function filterMyWeek(func){
+    return myWeek.filter(func);
+}
+
+console.log(filterMyWeek(entry => entry.activity === "study"));
 
 /* 
 Predictions: 
