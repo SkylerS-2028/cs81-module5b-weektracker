@@ -82,11 +82,10 @@ function mostCommonCategory(log){
     return mostCommon;
 }
 
-function filterMyWeek(func){
-    return myWeek.filter(func);
+function myWeekDataIsolate(func){
+    return myWeek.map(func);
 }
-
-console.log(filterMyWeek(entry => entry.activity === "study"));
+myWeekDataIsolate(entry => entry.hoursSpent);
 
 /* 
 Predictions: 
