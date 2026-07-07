@@ -63,6 +63,25 @@ function timeSpent(log, act){
     .reduce((entry, total) => entry+total, 0);
 }
 
+function mostCommonCategory(log){
+    const frequencyObject = log.map(entry => entry.category)
+    .reduce((acc, cat) => {
+        acc[cat] = (acc[cat] || 0) + 1;
+        return acc;
+    }, {});
+
+    let mostCommon = "";
+    let times = 0;
+    for (let [cat, freq] of Object.entries(frequencyObject)){
+        if (freq > times){
+            times = freq;
+            mostCommon = cat;
+        }
+    }
+    return mostCommon;
+}
+
+
 /* 
 Predictions: 
 Which activity will have the highest enjoyment?
